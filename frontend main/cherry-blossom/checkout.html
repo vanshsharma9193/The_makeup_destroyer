@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Cherry Blossom VIP Checkout. Complete your acquisition with encrypted security and express bespoke dispatch." />
+  <title>Bespoke Checkout | CHERRY BLOSSOM Haute Beauté</title>
+
+  <!-- External Styles & Icon Libraries -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <aside class="announcement-bar">
+    <div class="container">
+      <i class="fas fa-lock"></i>
+      <span>Secure 256-Bit Encrypted Luxury Checkout • Demonstration Platform</span>
+    </div>
+  </aside>
+
+  <!-- Header -->
+  <header class="luxury-header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="index.html" class="brand-logo-wrap">
+          <div class="brand-logo-icon">
+            <i class="fas fa-spa"></i>
+          </div>
+          <div class="brand-logo-text">
+            <span class="brand-logo-title">CHERRY BLOSSOM</span>
+            <span class="brand-logo-subtitle">Haute Beauté • Paris</span>
+          </div>
+        </a>
+
+        <div style="display: flex; align-items: center; gap: 16px; font-size: 0.88rem; color: var(--text-muted);">
+          <span><i class="fas fa-shield-alt" style="color: var(--primary-burgundy);"></i> Verified Merchant</span>
+          <a href="cart.html" style="color: var(--primary-burgundy); font-weight: 600;"><i class="fas fa-arrow-left"></i> Return to Bag</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="checkout-section">
+      <div class="container">
+        <!-- Breadcrumbs -->
+        <div class="breadcrumbs" style="justify-content: flex-start; margin-bottom: 24px;">
+          <a href="index.html">Home</a>
+          <span>/</span>
+          <a href="cart.html">Bag</a>
+          <span>/</span>
+          <span style="color: var(--dark-burgundy); font-weight: 600;">Checkout</span>
+        </div>
+
+        <form id="checkout-form">
+          <div class="checkout-grid">
+            <!-- Left: Checkout Forms -->
+            <div class="checkout-forms-column">
+              <!-- 1. Customer & Contact Details -->
+              <div class="checkout-card">
+                <h3 class="checkout-step-title">
+                  <span class="step-num">1</span>
+                  <span>Contact Information</span>
+                </h3>
+                <div class="form-grid-2">
+                  <div class="form-group">
+                    <label>First Name *</label>
+                    <input type="text" class="form-control" name="firstName" placeholder="e.g. Sanjana" required />
+                  </div>
+                  <div class="form-group">
+                    <label>Last Name *</label>
+                    <input type="text" class="form-control" name="lastName" placeholder="e.g. Roy" required />
+                  </div>
+                </div>
+                <div class="form-grid-2">
+                  <div class="form-group">
+                    <label>VIP Email Address *</label>
+                    <input type="email" class="form-control" name="email" placeholder="client@luxury.com" required />
+                  </div>
+                  <div class="form-group">
+                    <label>Mobile Number *</label>
+                    <input type="tel" class="form-control" name="phone" placeholder="9876543210" required />
+                  </div>
+                </div>
+              </div>
+
+              <!-- 2. Shipping Address -->
+              <div class="checkout-card">
+                <h3 class="checkout-step-title">
+                  <span class="step-num">2</span>
+                  <span>Delivery Address</span>
+                </h3>
+                <div class="form-group">
+                  <label>Street Address / Suite / Residence *</label>
+                  <input type="text" class="form-control" name="address" placeholder="e.g. Penthouse 4B, Silver Oak Heights, 14th Road" required />
+                </div>
+                <div class="form-grid-2">
+                  <div class="form-group">
+                    <label>City *</label>
+                    <input type="text" class="form-control" name="city" placeholder="Mumbai" required />
+                  </div>
+                  <div class="form-group">
+                    <label>State *</label>
+                    <input type="text" class="form-control" name="state" placeholder="Maharashtra" required />
+                  </div>
+                </div>
+                <div class="form-grid-2">
+                  <div class="form-group">
+                    <label>Postal Code / Pincode *</label>
+                    <input type="text" class="form-control" name="pincode" placeholder="400050" required />
+                  </div>
+                  <div class="form-group">
+                    <label>Country</label>
+                    <input type="text" class="form-control" value="India" readonly style="background: var(--light-grey);" />
+                  </div>
+                </div>
+              </div>
+
+              <!-- 3. Payment Method -->
+              <div class="checkout-card">
+                <h3 class="checkout-step-title">
+                  <span class="step-num">3</span>
+                  <span>Select Payment Method</span>
+                </h3>
+
+                <div class="payment-method-selector">
+                  <!-- Option 1: Credit / Debit Card -->
+                  <label class="payment-option-card selected" id="card-payment-tab">
+                    <div class="payment-left">
+                      <input type="radio" name="paymentMethod" value="card" checked />
+                      <div>
+                        <div class="payment-name">Credit / Debit Card</div>
+                        <small style="color: var(--text-muted); font-size: 0.78rem;">Visa, Mastercard, Amex, Rupay</small>
+                      </div>
+                    </div>
+                    <div class="payment-icons">
+                      <i class="fab fa-cc-visa"></i>
+                      <i class="fab fa-cc-mastercard"></i>
+                      <i class="fab fa-cc-amex"></i>
+                    </div>
+                  </label>
+
+                  <!-- Card Details Sub-form -->
+                  <div id="card-subform" style="padding: 16px; background: var(--bg-white); border-radius: 12px; border: 1px solid var(--border-color); margin-top: -6px; margin-bottom: 10px;">
+                    <div class="form-group">
+                      <label>Card Number</label>
+                      <input type="text" class="form-control" placeholder="•••• •••• •••• 4242" value="4242 •••• •••• 4242" />
+                    </div>
+                    <div class="form-grid-2">
+                      <div class="form-group">
+                        <label>Expiry (MM/YY)</label>
+                        <input type="text" class="form-control" placeholder="12/28" value="12/28" />
+                      </div>
+                      <div class="form-group">
+                        <label>CVV / CVC</label>
+                        <input type="password" class="form-control" placeholder="•••" value="888" maxlength="4" />
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Option 2: UPI -->
+                  <label class="payment-option-card">
+                    <div class="payment-left">
+                      <input type="radio" name="paymentMethod" value="upi" />
+                      <div>
+                        <div class="payment-name">UPI / QR Code</div>
+                        <small style="color: var(--text-muted); font-size: 0.78rem;">Google Pay, PhonePe, Paytm, BHIM</small>
+                      </div>
+                    </div>
+                    <div class="payment-icons">
+                      <i class="fab fa-google-pay"></i>
+                      <i class="fas fa-qrcode"></i>
+                    </div>
+                  </label>
+
+                  <!-- Option 3: Net Banking -->
+                  <label class="payment-option-card">
+                    <div class="payment-left">
+                      <input type="radio" name="paymentMethod" value="netbanking" />
+                      <div>
+                        <div class="payment-name">Net Banking</div>
+                        <small style="color: var(--text-muted); font-size: 0.78rem;">HDFC, ICICI, SBI, Axis, Kotak</small>
+                      </div>
+                    </div>
+                    <div class="payment-icons">
+                      <i class="fas fa-university"></i>
+                    </div>
+                  </label>
+
+                  <!-- Option 4: Cash on Delivery -->
+                  <label class="payment-option-card">
+                    <div class="payment-left">
+                      <input type="radio" name="paymentMethod" value="cod" />
+                      <div>
+                        <div class="payment-name">Cash on Delivery (COD)</div>
+                        <small style="color: var(--text-muted); font-size: 0.78rem;">Pay cash or UPI upon courier arrival</small>
+                      </div>
+                    </div>
+                    <div class="payment-icons">
+                      <i class="fas fa-money-bill-wave"></i>
+                    </div>
+                  </label>
+                </div>
+
+                <div style="background: var(--soft-pink); border-radius: 12px; padding: 14px 18px; margin-top: 24px; font-size: 0.85rem; color: var(--dark-burgundy); display: flex; align-items: center; gap: 12px;">
+                  <i class="fas fa-info-circle" style="font-size: 1.2rem; color: var(--cherry-red);"></i>
+                  <span>This is a frontend demonstration showcase. No genuine payment or credit card charge will take place.</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right: Order Review Sidebar -->
+            <div class="checkout-summary-column">
+              <div class="cart-summary-card">
+                <h3 class="summary-title">Order Review</h3>
+
+                <!-- Items list -->
+                <div id="checkout-items-list" style="max-height: 280px; overflow-y: auto; margin-bottom: 20px; display: flex; flex-direction: column; gap: 12px;">
+                  <!-- Populated via JS -->
+                </div>
+
+                <div class="summary-line-item">
+                  <span>Subtotal:</span>
+                  <strong id="chk-subtotal">₹0</strong>
+                </div>
+
+                <div class="summary-line-item" id="chk-discount-row" style="display: none; color: #2b9348;">
+                  <span>Privilege Discount:</span>
+                  <strong id="chk-discount">-₹0</strong>
+                </div>
+
+                <div class="summary-line-item">
+                  <span>Courier Dispatch:</span>
+                  <strong id="chk-shipping">₹150</strong>
+                </div>
+
+                <div class="summary-line-item total-line">
+                  <span>Total Amount:</span>
+                  <strong id="chk-grandtotal">₹0</strong>
+                </div>
+
+                <button type="submit" class="btn-luxury-primary btn-checkout-cta shimmer-btn-effect" id="btn-place-order" style="padding: 16px;">
+                  <i class="fas fa-lock"></i> Place Luxury Order
+                </button>
+
+                <div style="margin-top: 20px; text-align: center;">
+                  <span style="font-size: 0.75rem; color: var(--text-muted); display: block;">
+                    Complimentary VIP Gift Box & Deluxe Samples Included
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Celebration Order Confirmation Modal -->
+  <div class="modal-overlay" id="order-success-modal">
+    <div class="modal-content-card" style="max-width: 620px; text-align: center; padding: 48px 36px;">
+      <div style="width: 80px; height: 80px; border-radius: 50%; background: linear-gradient(135deg, var(--cherry-red), var(--primary-burgundy)); color: #FFFFFF; display: flex; align-items: center; justify-content: center; font-size: 2.4rem; margin: 0 auto 20px; box-shadow: 0 10px 30px rgba(100, 19, 47, 0.4);">
+        <i class="fas fa-check"></i>
+      </div>
+
+      <span class="section-tagline">Acquisition Confirmed</span>
+      <h2 style="font-size: 2.2rem; color: var(--dark-burgundy); margin-bottom: 8px;">Thank You For Choosing Royalty</h2>
+      <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 24px;">
+        Your order has been recorded in the Cherry Blossom Atelier. We are carefully packaging your cosmetic creations in our signature burgundy velvet box.
+      </p>
+
+      <div style="background: var(--soft-pink); border-radius: 16px; padding: 20px; margin-bottom: 28px; text-align: left;">
+        <div style="display: flex; justify-content: space-between; margin-bottom: 8px; font-size: 0.9rem;">
+          <span style="color: var(--text-muted);">Order Reference:</span>
+          <strong id="modal-order-id" style="color: var(--primary-burgundy); font-family: var(--font-sans);">CB-9482-LUX</strong>
+        </div>
+        <div style="display: flex; justify-content: space-between; margin-bottom: 8px; font-size: 0.9rem;">
+          <span style="color: var(--text-muted);">Estimated Dispatch:</span>
+          <strong style="color: var(--dark-burgundy);">Within 24 Hours via Express Air</strong>
+        </div>
+        <div style="display: flex; justify-content: space-between; font-size: 0.9rem;">
+          <span style="color: var(--text-muted);">Payment Mode:</span>
+          <strong id="modal-payment-mode" style="color: var(--dark-burgundy);">Credit Card</strong>
+        </div>
+      </div>
+
+      <div style="display: flex; gap: 14px; justify-content: center;">
+        <a href="shop.html" class="btn-luxury-primary shimmer-btn-effect">Continue Exploring</a>
+        <a href="index.html" class="btn-luxury-secondary">Return to Maison</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Luxury Footer -->
+  <footer class="luxury-footer">
+    <div class="container text-center">
+      <p class="footer-copyright">
+        &copy; 2026 CHERRY BLOSSOM HAUTE BEAUTÉ. All Rights Reserved. Luxury Demonstration Checkout.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Back To Top Button -->
+  <button type="button" class="btn-back-to-top" id="btn-back-to-top" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- JavaScript Modules -->
+  <script src="js/products.js"></script>
+  <script src="js/wishlist.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/filters.js"></script>
+  <script src="js/validation.js"></script>
+  <script src="js/main.js"></script>
+
+  <!-- Checkout Logic Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const cart = window.CartService.getCart();
+      const itemsList = document.getElementById('checkout-items-list');
+
+      // If cart is empty, redirect to shop or show empty
+      if (cart.length === 0) {
+        itemsList.innerHTML = '<p style="color: var(--text-muted); font-size: 0.9rem;">Your bag is empty. Please add cosmetics from our catalog.</p>';
+      } else {
+        itemsList.innerHTML = cart.map(item => `
+          <div style="display: flex; align-items: center; gap: 12px; padding-bottom: 10px; border-bottom: 1px solid var(--light-grey);">
+            <img src="${item.image}" alt="${item.name}" style="width: 50px; height: 50px; border-radius: 8px; object-fit: cover;" />
+            <div style="flex-grow: 1;">
+              <h5 style="font-family: var(--font-serif); font-size: 0.95rem; color: var(--dark-burgundy);">${item.name}</h5>
+              <small style="color: var(--cherry-red); font-size: 0.75rem;">${item.shade} × ${item.quantity}</small>
+            </div>
+            <strong style="font-size: 0.9rem; color: var(--dark-burgundy);">${window.ProductService.formatCurrency(item.price * item.quantity)}</strong>
+          </div>
+        `).join('');
+      }
+
+      // Populate Totals
+      const totals = window.CartService.getTotals();
+      document.getElementById('chk-subtotal').textContent = window.ProductService.formatCurrency(totals.subtotal);
+      
+      const discountRow = document.getElementById('chk-discount-row');
+      if (totals.discount > 0) {
+        discountRow.style.display = 'flex';
+        document.getElementById('chk-discount').textContent = `-${window.ProductService.formatCurrency(totals.discount)}`;
+      }
+
+      document.getElementById('chk-shipping').textContent = totals.shipping === 0 ? 'COMPLIMENTARY' : window.ProductService.formatCurrency(totals.shipping);
+      document.getElementById('chk-grandtotal').textContent = window.ProductService.formatCurrency(totals.grandTotal);
+
+      // Payment tab toggle highlighting
+      document.querySelectorAll('.payment-option-card').forEach(card => {
+        card.addEventListener('click', () => {
+          document.querySelectorAll('.payment-option-card').forEach(c => c.classList.remove('selected'));
+          card.classList.add('selected');
+          const radio = card.querySelector('input[type="radio"]');
+          if (radio) radio.checked = true;
+
+          // Toggle card form subform
+          const cardSubform = document.getElementById('card-subform');
+          if (cardSubform) {
+            cardSubform.style.display = (radio && radio.value === 'card') ? 'block' : 'none';
+          }
+        });
+      });
+
+      // Checkout submission handler
+      const checkoutForm = document.getElementById('checkout-form');
+      checkoutForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        if (cart.length === 0) {
+          window.showToast('Please add items to your shopping bag before placing an order.', 'error');
+          return;
+        }
+
+        const isValid = window.ValidationService.validateCheckoutForm(checkoutForm);
+        if (!isValid) return;
+
+        // Animate button processing state
+        const btn = document.getElementById('btn-place-order');
+        btn.disabled = true;
+        btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Processing Haute Order...';
+
+        setTimeout(() => {
+          // Generate unique order ID
+          const orderNum = 'CB-' + Math.floor(1000 + Math.random() * 9000) + '-LUX';
+          const paymentSelected = checkoutForm.querySelector('input[name="paymentMethod"]:checked');
+          const payLabel = paymentSelected ? paymentSelected.value.toUpperCase() : 'CARD';
+
+          document.getElementById('modal-order-id').textContent = orderNum;
+          document.getElementById('modal-payment-mode').textContent = payLabel === 'CARD' ? 'Credit / Debit Card' : payLabel;
+
+          // Clear cart
+          window.CartService.clearCart();
+
+          // Show celebration modal
+          const modal = document.getElementById('order-success-modal');
+          modal.classList.add('active');
+          document.body.classList.add('modal-open');
+        }, 1200);
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+[
+  {
+    "id": "CB-8942-LUX",
+    "customer": {
+      "firstName": "Lady Sanjana",
+      "lastName": "Roy",
+      "email": "lady.sanjana@cherryblossom.com",
+      "phone": "9876543210",
+      "address": "Penthouse 4B, Silver Oak Heights, 14th Road",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "pincode": "400050",
+      "country": "India"
+    },
+    "items": [
+      {
+        "id": "cb-lip-01_Burgundy_Velvet",
+        "productId": "cb-lip-01",
+        "name": "Velvet Rouge Satin Lipstick",
+        "price": 1850,
+        "quantity": 1,
+        "shade": "Burgundy Velvet",
+        "image": "https://images.unsplash.com/photo-1586495777744-4413f21062fa?auto=format&fit=crop&w=800&q=80"
+      }
+    ],
+    "pricing": {
+      "subtotal": 1850,
+      "discount": 370,
+      "shipping": 0,
+      "grandTotal": 1480,
+      "couponCode": "BLOSSOM20"
+    },
+    "paymentMethod": "CARD",
+    "status": "Processing in Atelier",
+    "createdAt": "2026-11-04T14:30:00.000Z"
+  }
+]
+

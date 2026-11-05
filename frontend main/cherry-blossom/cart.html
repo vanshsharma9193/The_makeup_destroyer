@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Your Cherry Blossom Shopping Bag. Review chosen luxury cosmetics, select shades, apply promotional privileges, and proceed to checkout." />
+  <title>Shopping Bag | CHERRY BLOSSOM Haute Beauté</title>
+
+  <!-- External Styles & Icon Libraries -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <aside class="announcement-bar">
+    <div class="container">
+      <i class="fas fa-sparkles"></i>
+      <span>Complimentary Haute Couture Sample with every order above ₹2,999 | Use Code: <strong>BLOSSOM20</strong></span>
+    </div>
+  </aside>
+
+  <!-- Header -->
+  <header class="luxury-header">
+    <div class="container">
+      <div class="header-inner">
+        <button type="button" class="mobile-menu-trigger" id="mobile-menu-toggle" aria-label="Open Navigation">
+          <i class="fas fa-bars"></i>
+        </button>
+
+        <a href="index.html" class="brand-logo-wrap">
+          <div class="brand-logo-icon">
+            <i class="fas fa-spa"></i>
+          </div>
+          <div class="brand-logo-text">
+            <span class="brand-logo-title">CHERRY BLOSSOM</span>
+            <span class="brand-logo-subtitle">Haute Beauté • Paris</span>
+          </div>
+        </a>
+
+        <nav class="main-nav" aria-label="Main Navigation">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="shop.html" class="nav-link">Shop Collection</a>
+          <a href="about.html" class="nav-link">Our Atelier</a>
+          <a href="contact.html" class="nav-link">Concierge</a>
+        </nav>
+
+        <div class="header-actions">
+          <button type="button" class="nav-icon-btn btn-open-search" aria-label="Search Catalog" title="Search Collections">
+            <i class="fas fa-search"></i>
+          </button>
+
+          <a href="shop.html?view=wishlist" class="nav-icon-link" aria-label="Wishlist" title="Your Wishlist">
+            <i class="far fa-heart"></i>
+            <span class="badge-counter wishlist-count-badge" style="display:none;">0</span>
+          </a>
+
+          <button type="button" class="nav-icon-btn btn-open-mini-cart" aria-label="Shopping Bag" title="View Shopping Bag">
+            <i class="fas fa-shopping-bag"></i>
+            <span class="badge-counter cart-count-badge" style="display:none;">0</span>
+          </button>
+
+          <div class="user-auth-indicator">
+            <a href="login.html" class="nav-icon-link" title="VIP Account">
+              <i class="far fa-user"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="drawer-backdrop" id="mobile-nav-backdrop"></div>
+  <div class="mobile-nav-drawer" id="mobile-nav-drawer">
+    <div class="mobile-nav-header">
+      <div class="brand-logo-wrap">
+        <i class="fas fa-spa" style="color: var(--primary-burgundy); font-size: 1.4rem;"></i>
+        <span class="brand-logo-title" style="font-size: 1.3rem;">CHERRY BLOSSOM</span>
+      </div>
+      <button type="button" class="btn-close-drawer" id="mobile-nav-close">&times;</button>
+    </div>
+    <div class="mobile-nav-links">
+      <a href="index.html" class="mobile-nav-link">Home <i class="fas fa-chevron-right"></i></a>
+      <a href="shop.html" class="mobile-nav-link">Shop All Cosmetics <i class="fas fa-chevron-right"></i></a>
+      <a href="about.html" class="mobile-nav-link">Our Atelier & Heritage <i class="fas fa-chevron-right"></i></a>
+      <a href="contact.html" class="mobile-nav-link">Client Concierge <i class="fas fa-chevron-right"></i></a>
+      <a href="login.html" class="mobile-nav-link">VIP Sign In <i class="fas fa-chevron-right"></i></a>
+    </div>
+  </div>
+
+  <main>
+    <!-- Cart Page Header -->
+    <section class="shop-hero-header silver-sparkle-container">
+      <div class="container">
+        <div class="breadcrumbs">
+          <a href="index.html">Home</a>
+          <span>/</span>
+          <span style="color: #FFFFFF;">Shopping Bag</span>
+        </div>
+        <h1>Your Curated Selection</h1>
+        <p style="color: var(--soft-pink); font-size: 1.05rem;">
+          Review your bespoke cosmetic selections, apply exclusive VIP privileges, and experience our signature unboxing.
+        </p>
+      </div>
+    </section>
+
+    <!-- Cart Layout Container -->
+    <section class="cart-section">
+      <div class="container">
+        <!-- Empty Cart Notice -->
+        <div id="cart-page-empty" style="display: none; text-align: center; padding: 80px 20px; background: #FFFFFF; border-radius: 24px; border: 1px solid var(--border-color); box-shadow: var(--shadow-sm);">
+          <div style="font-size: 4rem; color: var(--cherry-red); margin-bottom: 20px;"><i class="fas fa-shopping-bag"></i></div>
+          <h2 style="font-size: 2.2rem; color: var(--dark-burgundy); margin-bottom: 12px;">Your Shopping Bag is Empty</h2>
+          <p style="color: var(--text-muted); max-width: 520px; margin: 0 auto 30px; font-size: 1.05rem;">
+            Treat yourself to our internationally acclaimed lipsticks, silk foundations, and royal eyeshadow palettes.
+          </p>
+          <a href="shop.html" class="btn-luxury-primary shimmer-btn-effect">
+            Discover Haute Collections <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+
+        <!-- Populated Cart Content -->
+        <div class="cart-layout-grid" id="cart-page-content">
+          <!-- Left: Table of Items -->
+          <div class="cart-table-wrapper">
+            <table class="cart-table">
+              <thead>
+                <tr>
+                  <th style="width: 48%;">Cosmetic Creation</th>
+                  <th style="width: 18%;">Price</th>
+                  <th style="width: 18%;">Quantity</th>
+                  <th style="width: 16%; text-align: right;">Total</th>
+                </tr>
+              </thead>
+              <tbody id="cart-table-tbody">
+                <!-- Dynamically populated via JS -->
+              </tbody>
+            </table>
+
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 24px; padding-top: 20px; border-top: 1px solid var(--light-grey);">
+              <a href="shop.html" class="btn-luxury-secondary" style="font-size: 0.82rem; padding: 12px 24px;">
+                <i class="fas fa-arrow-left"></i> Continue Shopping
+              </a>
+              <button type="button" class="btn-luxury-secondary" style="font-size: 0.82rem; padding: 12px 24px; border-color: #c92a2a; color: #c92a2a;" onclick="CartService.clearCart(); renderCartPageUI();">
+                <i class="far fa-trash-alt"></i> Clear Bag
+              </button>
+            </div>
+          </div>
+
+          <!-- Right: Summary Card -->
+          <div class="cart-summary-card">
+            <h3 class="summary-title">Order Summary</h3>
+
+            <!-- Free Shipping Progress -->
+            <div class="free-shipping-progress-box" id="shipping-progress-card">
+              <div class="free-shipping-text" id="shipping-progress-text">
+                <i class="fas fa-truck"></i> <span>Add ₹1,999 for Complimentary Shipping</span>
+              </div>
+              <div class="progress-bar-bg">
+                <div class="progress-bar-fill" id="shipping-progress-bar" style="width: 0%;"></div>
+              </div>
+            </div>
+
+            <!-- Coupon Input -->
+            <div class="coupon-form-group">
+              <input type="text" id="cart-coupon-input" placeholder="Coupon Code (e.g. BLOSSOM20)" />
+              <button type="button" class="btn-apply-coupon" id="btn-apply-coupon">Apply</button>
+            </div>
+
+            <!-- Applied Coupon Tag (if any) -->
+            <div id="applied-coupon-tag-wrap" style="display: none; margin-bottom: 20px;">
+              <span class="filter-pill" style="background: #e9f7ef; color: #2b9348;">
+                <i class="fas fa-tag"></i> <span id="applied-coupon-code-label">CODE</span> (<span id="applied-coupon-desc-label">10% off</span>)
+                <button type="button" onclick="CartService.removeCoupon(); renderCartPageUI();">&times;</button>
+              </span>
+            </div>
+
+            <!-- Breakdown Lines -->
+            <div class="summary-line-item">
+              <span>Subtotal:</span>
+              <strong id="cart-subtotal-val">₹0</strong>
+            </div>
+
+            <div class="summary-line-item" id="summary-discount-row" style="display: none; color: #2b9348;">
+              <span>VIP Privilege Discount:</span>
+              <strong id="cart-discount-val">-₹0</strong>
+            </div>
+
+            <div class="summary-line-item">
+              <span>Estimated Delivery:</span>
+              <strong id="cart-shipping-val">₹150</strong>
+            </div>
+
+            <div class="summary-line-item total-line">
+              <span>Estimated Total:</span>
+              <strong id="cart-grandtotal-val">₹0</strong>
+            </div>
+
+            <p style="font-size: 0.78rem; color: var(--text-muted); margin-top: 10px; text-align: center;">
+              Taxes calculated at checkout. Complimentary luxury gift box included.
+            </p>
+
+            <a href="checkout.html" class="btn-luxury-primary btn-checkout-cta shimmer-btn-effect">
+              Proceed to Checkout <i class="fas fa-arrow-right"></i>
+            </a>
+
+            <!-- Reassurance Icons -->
+            <div style="margin-top: 24px; padding-top: 18px; border-top: 1px solid var(--light-grey); display: flex; flex-direction: column; gap: 8px;">
+              <div style="display: flex; align-items: center; gap: 10px; font-size: 0.8rem; color: var(--text-muted);">
+                <i class="fas fa-lock" style="color: var(--primary-burgundy);"></i> 256-Bit SSL Encrypted Demonstration
+              </div>
+              <div style="display: flex; align-items: center; gap: 10px; font-size: 0.8rem; color: var(--text-muted);">
+                <i class="fas fa-box" style="color: var(--primary-burgundy);"></i> Signature Burgundy Velvet Packaging
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Luxury Footer -->
+  <footer class="luxury-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <div class="footer-brand-col">
+          <a href="index.html" class="brand-logo-wrap">
+            <div class="brand-logo-icon">
+              <i class="fas fa-spa"></i>
+            </div>
+            <div class="brand-logo-text">
+              <span class="brand-logo-title">CHERRY BLOSSOM</span>
+              <span class="brand-logo-subtitle">Haute Beauté • Paris</span>
+            </div>
+          </a>
+          <p class="footer-brand-text">
+            Crafting the world's most luxurious cosmetic creations since 2014. Where Japanese Sakura botanical grace unites with French high fashion refinement.
+          </p>
+          <div class="footer-social-links">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://pinterest.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-title">The Collections</h4>
+          <ul class="footer-links-list">
+            <li><a href="shop.html?category=Lipsticks">Velvet Lipsticks</a></li>
+            <li><a href="shop.html?category=Foundations">Luminous Foundations</a></li>
+            <li><a href="shop.html?category=Eyeshadow%20Palettes">Eyeshadow Palettes</a></li>
+            <li><a href="shop.html?category=Highlighters">Diamond Highlighters</a></li>
+            <li><a href="shop.html?category=Blushes">Cherry Petal Blushes</a></li>
+            <li><a href="shop.html?category=Makeup%20Brushes">Artisan Vegan Brushes</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Client Concierge</h4>
+          <ul class="footer-links-list">
+            <li><a href="about.html">The Maison Atelier</a></li>
+            <li><a href="contact.html">Boutique Appointments</a></li>
+            <li><a href="contact.html#faq">Shipping & Deliveries</a></li>
+            <li><a href="cart.html">View Shopping Bag</a></li>
+            <li><a href="login.html">VIP Member Account</a></li>
+            <li><a href="contact.html#faq">Shade Finding Service</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Flagship Salons</h4>
+          <div class="footer-contact-info">
+            <p>
+              <i class="fas fa-map-marker-alt"></i>
+              <span>74 Palais Royal, Bandra West, Mumbai 400050, India</span>
+            </p>
+            <p>
+              <i class="fas fa-phone-alt"></i>
+              <span>VIP Concierge: +91 22 8900 2400</span>
+            </p>
+            <p>
+              <i class="fas fa-envelope"></i>
+              <span>concierge@cherryblossombeaute.com</span>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copyright">
+          &copy; 2026 CHERRY BLOSSOM HAUTE BEAUTÉ. All Rights Reserved.
+        </p>
+        <div class="footer-payment-icons">
+          <i class="fab fa-cc-visa" title="Visa"></i>
+          <i class="fab fa-cc-mastercard" title="Mastercard"></i>
+          <i class="fab fa-cc-amex" title="American Express"></i>
+          <i class="fab fa-google-pay" title="Google Pay"></i>
+          <i class="fas fa-shield-alt" title="100% Secure 256-Bit SSL"></i>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mini Cart Drawer -->
+  <div class="drawer-backdrop" id="mini-cart-backdrop"></div>
+  <aside class="mini-cart-drawer" id="mini-cart-drawer" aria-label="Mini Cart">
+    <div class="mini-cart-header">
+      <h3>Your Luxury Bag (<span id="mini-cart-item-count">0</span>)</h3>
+      <button type="button" class="btn-close-drawer" id="mini-cart-close">&times;</button>
+    </div>
+
+    <div class="mini-cart-body">
+      <div class="mini-cart-empty" id="mini-cart-empty">
+        <i class="fas fa-shopping-bag"></i>
+        <h4 style="font-size: 1.2rem; color: var(--dark-burgundy); margin-bottom: 8px;">Your Bag is Currently Empty</h4>
+        <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 24px;">Discover our iconic cosmetics and treat yourself to royalty.</p>
+        <a href="shop.html" class="btn-luxury-primary shimmer-btn-effect">Explore Collection</a>
+      </div>
+
+      <div id="mini-cart-content" style="display: none;">
+        <div id="mini-cart-items"></div>
+      </div>
+    </div>
+
+    <div class="mini-cart-footer">
+      <div class="mini-cart-subtotal-row">
+        <span>Estimated Subtotal:</span>
+        <strong id="mini-cart-subtotal">₹0</strong>
+      </div>
+      <div class="mini-cart-btns-row">
+        <a href="cart.html" class="btn-luxury-secondary" style="padding: 12px 18px; font-size: 0.8rem; text-align: center;">View Bag</a>
+        <a href="checkout.html" class="btn-luxury-primary shimmer-btn-effect" style="padding: 12px 18px; font-size: 0.8rem; text-align: center;">Checkout</a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Global Search Overlay -->
+  <div class="search-modal-overlay" id="search-modal-overlay">
+    <div class="search-modal-container">
+      <span class="search-modal-close" id="search-modal-close">&times;</span>
+      <div class="search-box-giant">
+        <input type="text" id="global-search-input" placeholder="Search lipsticks, foundations, palettes, brushes..." autocomplete="off" />
+        <i class="fas fa-search"></i>
+      </div>
+      <div class="search-results-list" id="global-search-results">
+        <p class="search-placeholder-text">Type at least 2 characters to explore luxury collections...</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Back To Top Button -->
+  <button type="button" class="btn-back-to-top" id="btn-back-to-top" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- JavaScript Modules -->
+  <script src="js/products.js"></script>
+  <script src="js/wishlist.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/filters.js"></script>
+  <script src="js/validation.js"></script>
+  <script src="js/main.js"></script>
+
+  <!-- Cart Page Renderer Logic -->
+  <script>
+    function renderCartPageUI() {
+      const cart = window.CartService.getCart();
+      const emptyWrap = document.getElementById('cart-page-empty');
+      const contentWrap = document.getElementById('cart-page-content');
+      const tbody = document.getElementById('cart-table-tbody');
+
+      if (!tbody) return;
+
+      if (cart.length === 0) {
+        if (emptyWrap) emptyWrap.style.display = 'block';
+        if (contentWrap) contentWrap.style.display = 'none';
+        return;
+      }
+
+      if (emptyWrap) emptyWrap.style.display = 'none';
+      if (contentWrap) contentWrap.style.display = 'grid';
+
+      // Render table rows
+      tbody.innerHTML = cart.map(item => `
+        <tr data-cart-id="${item.id}">
+          <td data-label="Product">
+            <div class="cart-item-cell">
+              <img src="${item.image}" alt="${item.name}" class="cart-item-img" />
+              <div>
+                <h4 class="cart-item-title"><a href="product.html?id=${item.productId}">${item.name}</a></h4>
+                <span class="cart-item-shade"><i class="fas fa-palette"></i> Shade: ${item.shade}</span>
+              </div>
+            </div>
+          </td>
+          <td data-label="Price">
+            <span style="font-weight: 600; color: var(--dark-burgundy);">${window.ProductService.formatCurrency(item.price)}</span>
+          </td>
+          <td data-label="Quantity">
+            <div class="qty-stepper" style="padding: 2px 6px;">
+              <button type="button" onclick="CartService.updateQuantity('${item.id}', ${item.quantity - 1}); renderCartPageUI();">-</button>
+              <input type="number" value="${item.quantity}" readonly style="width: 32px;" />
+              <button type="button" onclick="CartService.updateQuantity('${item.id}', ${item.quantity + 1}); renderCartPageUI();">+</button>
+            </div>
+          </td>
+          <td data-label="Total" style="text-align: right;">
+            <div style="display: flex; align-items: center; justify-content: flex-end; gap: 14px;">
+              <strong style="color: var(--primary-burgundy); font-size: 1.1rem;">${window.ProductService.formatCurrency(item.price * item.quantity)}</strong>
+              <button type="button" class="btn-remove-cart" onclick="CartService.removeFromCart('${item.id}'); renderCartPageUI();" title="Remove from bag">
+                <i class="far fa-trash-alt"></i>
+              </button>
+            </div>
+          </td>
+        </tr>
+      `).join('');
+
+      // Totals calculation
+      const totals = window.CartService.getTotals();
+      document.getElementById('cart-subtotal-val').textContent = window.ProductService.formatCurrency(totals.subtotal);
+      
+      const discountRow = document.getElementById('summary-discount-row');
+      if (totals.discount > 0) {
+        discountRow.style.display = 'flex';
+        document.getElementById('cart-discount-val').textContent = `-${window.ProductService.formatCurrency(totals.discount)}`;
+      } else {
+        discountRow.style.display = 'none';
+      }
+
+      document.getElementById('cart-shipping-val').textContent = totals.shipping === 0 ? 'COMPLIMENTARY' : window.ProductService.formatCurrency(totals.shipping);
+      document.getElementById('cart-grandtotal-val').textContent = window.ProductService.formatCurrency(totals.grandTotal);
+
+      // Shipping Progress Bar
+      const progressText = document.getElementById('shipping-progress-text');
+      const progressBar = document.getElementById('shipping-progress-bar');
+      if (totals.freeShippingRemaining <= 0) {
+        progressText.innerHTML = '<i class="fas fa-check-circle" style="color: #2b9348;"></i> <span style="color: #2b9348;">You have unlocked Complimentary Shipping!</span>';
+        progressBar.style.width = '100%';
+        progressBar.style.background = '#2b9348';
+      } else {
+        const pct = Math.min(100, Math.round((totals.subtotal / totals.freeShippingThreshold) * 100));
+        progressText.innerHTML = `<i class="fas fa-truck"></i> <span>Add ${window.ProductService.formatCurrency(totals.freeShippingRemaining)} for Complimentary Shipping</span>`;
+        progressBar.style.width = `${pct}%`;
+        progressBar.style.background = 'linear-gradient(90deg, var(--cherry-red), var(--primary-burgundy))';
+      }
+
+      // Applied Coupon tag
+      const couponTagWrap = document.getElementById('applied-coupon-tag-wrap');
+      if (totals.coupon) {
+        couponTagWrap.style.display = 'block';
+        document.getElementById('applied-coupon-code-label').textContent = totals.coupon.code;
+        document.getElementById('applied-coupon-desc-label').textContent = totals.coupon.label;
+      } else {
+        couponTagWrap.style.display = 'none';
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      renderCartPageUI();
+
+      // Coupon apply button
+      document.getElementById('btn-apply-coupon').addEventListener('click', () => {
+        const input = document.getElementById('cart-coupon-input');
+        const res = window.CartService.applyCoupon(input.value);
+        if (res.success) {
+          window.showToast(res.message, 'success');
+          input.value = '';
+          renderCartPageUI();
+        } else {
+          window.showToast(res.message, 'error');
+        }
+      });
+    });
+
+    // Listen to cart events
+    window.addEventListener('cartUpdated', () => {
+      renderCartPageUI();
+    });
+  </script>
+</body>
+</html>

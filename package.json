@@ -1,0 +1,13 @@
+{
+  "name": "cherry-blossom-luxury-beauty-fullstack",
+  "version": "1.0.0",
+  "description": "Full-Stack Luxury E-commerce Web Application for CHERRY BLOSSOM Haute Beauté",
+  "private": true,
+  "scripts": {
+    "dev:frontend": "cd frontend && npm run dev",
+    "dev:backend": "cd backend && npm run dev",
+    "build:frontend": "cd frontend && npm run build",
+    "start:backend": "cd backend && npm start"
+  }
+}
+

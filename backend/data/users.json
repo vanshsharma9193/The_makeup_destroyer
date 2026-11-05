@@ -1,0 +1,23 @@
+[
+  {
+    "id": "usr-vip-01",
+    "name": "Lady Sanjana Roy",
+    "email": "lady.sanjana@cherryblossom.com",
+    "password": "$2a$10$wK1Rk9Y1xY7I5x.b9rQe7.a7hB3r1uF6b9oG3aF2kC8vJ7aB3r1uF",
+    "phone": "9876543210",
+    "role": "vip",
+    "tier": "VIP Diamond Tier",
+    "createdAt": "2026-01-15T10:00:00.000Z"
+  },
+  {
+    "id": "usr-adm-01",
+    "name": "Maison Concierge Master",
+    "email": "concierge@cherryblossombeaute.com",
+    "password": "$2a$10$wK1Rk9Y1xY7I5x.b9rQe7.a7hB3r1uF6b9oG3aF2kC8vJ7aB3r1uF",
+    "phone": "9999988888",
+    "role": "admin",
+    "tier": "Royal Director",
+    "createdAt": "2026-01-01T10:00:00.000Z"
+  }
+]
+

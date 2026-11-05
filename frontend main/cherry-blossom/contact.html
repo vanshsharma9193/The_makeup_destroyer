@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Contact the Cherry Blossom Client Concierge. Private beauty consultations, shade matching, and boutique appointment booking." />
+  <title>Client Concierge & Salons | CHERRY BLOSSOM Haute Beauté</title>
+
+  <!-- External Styles & Icon Libraries -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <aside class="announcement-bar">
+    <div class="container">
+      <i class="fas fa-sparkles"></i>
+      <span>Complimentary Haute Couture Sample with every order above ₹2,999 | Use Code: <strong>BLOSSOM20</strong></span>
+    </div>
+  </aside>
+
+  <!-- Header -->
+  <header class="luxury-header">
+    <div class="container">
+      <div class="header-inner">
+        <button type="button" class="mobile-menu-trigger" id="mobile-menu-toggle" aria-label="Open Navigation">
+          <i class="fas fa-bars"></i>
+        </button>
+
+        <a href="index.html" class="brand-logo-wrap">
+          <div class="brand-logo-icon">
+            <i class="fas fa-spa"></i>
+          </div>
+          <div class="brand-logo-text">
+            <span class="brand-logo-title">CHERRY BLOSSOM</span>
+            <span class="brand-logo-subtitle">Haute Beauté • Paris</span>
+          </div>
+        </a>
+
+        <nav class="main-nav" aria-label="Main Navigation">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="shop.html" class="nav-link">Shop Collection</a>
+          <a href="about.html" class="nav-link">Our Atelier</a>
+          <a href="contact.html" class="nav-link active">Concierge</a>
+        </nav>
+
+        <div class="header-actions">
+          <button type="button" class="nav-icon-btn btn-open-search" aria-label="Search Catalog" title="Search Collections">
+            <i class="fas fa-search"></i>
+          </button>
+
+          <a href="shop.html?view=wishlist" class="nav-icon-link" aria-label="Wishlist" title="Your Wishlist">
+            <i class="far fa-heart"></i>
+            <span class="badge-counter wishlist-count-badge" style="display:none;">0</span>
+          </a>
+
+          <button type="button" class="nav-icon-btn btn-open-mini-cart" aria-label="Shopping Bag" title="View Shopping Bag">
+            <i class="fas fa-shopping-bag"></i>
+            <span class="badge-counter cart-count-badge" style="display:none;">0</span>
+          </button>
+
+          <div class="user-auth-indicator">
+            <a href="login.html" class="nav-icon-link" title="VIP Account">
+              <i class="far fa-user"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="drawer-backdrop" id="mobile-nav-backdrop"></div>
+  <div class="mobile-nav-drawer" id="mobile-nav-drawer">
+    <div class="mobile-nav-header">
+      <div class="brand-logo-wrap">
+        <i class="fas fa-spa" style="color: var(--primary-burgundy); font-size: 1.4rem;"></i>
+        <span class="brand-logo-title" style="font-size: 1.3rem;">CHERRY BLOSSOM</span>
+      </div>
+      <button type="button" class="btn-close-drawer" id="mobile-nav-close">&times;</button>
+    </div>
+    <div class="mobile-nav-links">
+      <a href="index.html" class="mobile-nav-link">Home <i class="fas fa-chevron-right"></i></a>
+      <a href="shop.html" class="mobile-nav-link">Shop All Cosmetics <i class="fas fa-chevron-right"></i></a>
+      <a href="about.html" class="mobile-nav-link">Our Atelier & Heritage <i class="fas fa-chevron-right"></i></a>
+      <a href="contact.html" class="mobile-nav-link active">Client Concierge <i class="fas fa-chevron-right"></i></a>
+      <a href="login.html" class="mobile-nav-link">VIP Sign In <i class="fas fa-chevron-right"></i></a>
+    </div>
+  </div>
+
+  <main>
+    <!-- Contact Hero -->
+    <section class="about-hero-section silver-sparkle-container">
+      <div class="container">
+        <div class="breadcrumbs">
+          <a href="index.html">Home</a>
+          <span>/</span>
+          <span style="color: #FFFFFF;">Client Concierge</span>
+        </div>
+        <span class="section-tagline" style="color: var(--silver-bright);">At Your Service</span>
+        <h1>Private Concierge & Salons</h1>
+        <p style="color: var(--soft-pink); max-width: 620px; margin: 0 auto; font-size: 1.05rem;">
+          Whether you desire bespoke shade curation, bridal beauty appointments, or assistance with an order, our beauty ambassadors await your correspondence.
+        </p>
+      </div>
+    </section>
+
+    <!-- Main Contact & Flagships Section -->
+    <section class="contact-section">
+      <div class="container">
+        <div class="contact-grid">
+          <!-- Left: Flagship Information -->
+          <div class="contact-info-card reveal-on-scroll">
+            <span class="promo-badge-tag"><i class="fas fa-crown"></i> Dedicated VIP Care</span>
+            <h3>Connect With The Maison</h3>
+            <p>
+              Our flagship salons in Mumbai, Delhi, and Paris offer private consultations with our senior makeup artists.
+            </p>
+
+            <div class="boutique-list">
+              <div class="boutique-item">
+                <div class="boutique-icon"><i class="fas fa-map-marker-alt"></i></div>
+                <div class="boutique-text">
+                  <h4>Mumbai Flagship Salon</h4>
+                  <p>74 Palais Royal, Waterfield Road, Bandra West, Mumbai 400050</p>
+                  <small style="color: var(--silver-bright); display: block; margin-top: 4px;">Private Masterclasses by Appointment</small>
+                </div>
+              </div>
+
+              <div class="boutique-item">
+                <div class="boutique-icon"><i class="fas fa-map-marker-alt"></i></div>
+                <div class="boutique-text">
+                  <h4>New Delhi Heritage Boutique</h4>
+                  <p>The Colonnade, Inner Circle, Connaught Place, New Delhi 110001</p>
+                </div>
+              </div>
+
+              <div class="boutique-item">
+                <div class="boutique-icon"><i class="fas fa-phone-alt"></i></div>
+                <div class="boutique-text">
+                  <h4>VIP Direct Hotline</h4>
+                  <p>+91 22 8900 2400 / +91 11 4500 8800</p>
+                  <small style="color: var(--silver-bright); display: block; margin-top: 2px;">Toll-free across India</small>
+                </div>
+              </div>
+
+              <div class="boutique-item">
+                <div class="boutique-icon"><i class="fas fa-envelope"></i></div>
+                <div class="boutique-text">
+                  <h4>Electronic Correspondence</h4>
+                  <p>concierge@cherryblossombeaute.com</p>
+                </div>
+              </div>
+            </div>
+
+            <div style="margin-top: auto; padding-top: 24px; border-top: 1px solid rgba(192, 192, 192, 0.2); display: flex; gap: 14px;">
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-btn"><i class="fab fa-instagram"></i></a>
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-btn"><i class="fab fa-facebook-f"></i></a>
+              <a href="https://pinterest.com" target="_blank" rel="noopener noreferrer" class="social-btn"><i class="fab fa-pinterest-p"></i></a>
+            </div>
+          </div>
+
+          <!-- Right: Contact Form -->
+          <div class="contact-form-card reveal-on-scroll delay-1">
+            <span class="section-tagline">Send an Inquiry</span>
+            <h3 style="font-size: 1.8rem; color: var(--dark-burgundy); margin-bottom: 8px;">Direct Correspondence</h3>
+            <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 28px;">
+              Our concierge team typically responds within four business hours.
+            </p>
+
+            <form id="contact-form">
+              <div class="form-grid-2">
+                <div class="form-group">
+                  <label>Full Name *</label>
+                  <input type="text" class="form-control" name="name" placeholder="Lady Charlotte..." required />
+                </div>
+                <div class="form-group">
+                  <label>Email Address *</label>
+                  <input type="email" class="form-control" name="email" placeholder="charlotte@luxury.com" required />
+                </div>
+              </div>
+
+              <div class="form-grid-2">
+                <div class="form-group">
+                  <label>Phone Number (Optional)</label>
+                  <input type="tel" class="form-control" name="phone" placeholder="+91 98765 43210" />
+                </div>
+                <div class="form-group">
+                  <label>Inquiry Nature *</label>
+                  <select class="form-control" name="subject">
+                    <option value="Shade Consultation">Virtual Shade Matching Consultation</option>
+                    <option value="Boutique Appointment">Book Salon Appointment (Mumbai/Delhi)</option>
+                    <option value="Order Status">Existing Acquisition Inquiry</option>
+                    <option value="Bridal Atelier">Bespoke Bridal Beauty Package</option>
+                    <option value="Press & VIP">Press & VIP Partnerships</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label>Your Message *</label>
+                <textarea class="form-control" name="message" rows="5" placeholder="Share your inquiry or requested appointment date..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn-luxury-primary shimmer-btn-effect" style="width: 100%; margin-top: 10px;">
+                <span>Dispatch Correspondence</span>
+                <i class="fas fa-paper-plane"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Accordion Section -->
+    <section class="faq-section" id="faq">
+      <div class="container">
+        <div class="text-center reveal-on-scroll">
+          <span class="section-tagline">Client Guidance</span>
+          <h2 class="section-heading-lg">Frequently Answered Curiosities</h2>
+          <p class="section-description">
+            Everything you need to know about our formulations, packaging, shade selection, and worldwide dispatch.
+          </p>
+        </div>
+
+        <div class="faq-list reveal-on-scroll delay-1">
+          <!-- FAQ 1 -->
+          <div class="faq-card active">
+            <button type="button" class="faq-question">
+              <span>Are all Cherry Blossom cosmetics 100% cruelty-free and vegan?</span>
+              <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Unconditionally yes. We do not test on animals at any stage of product formulation, nor do we commission third parties to do so. Our formulas are registered cruelty-free, utilizing nourishing botanical oils and synthetic vegan silk proteins in place of animal-derived binders.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="faq-card">
+            <button type="button" class="faq-question">
+              <span>How does your complimentary luxury dispatch and delivery operate?</span>
+              <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+              <p>
+                All orders above ₹1,999 qualify for complimentary express air courier delivery across India. Orders are hand-wrapped in our signature burgundy velvet collector box and dispatched within 24 hours. Metros receive delivery within 48 to 72 hours.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="faq-card">
+            <button type="button" class="faq-question">
+              <span>What if I select a foundation or concealer shade that does not match?</span>
+              <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Every foundation and concealer includes a complimentary companion discovery blister sample in the box. You may test the blister before unsealing the master flacon. If it is not your exact tone, our complimentary courier will collect it and exchange it for your true match without fee.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 4 -->
+          <div class="faq-card">
+            <button type="button" class="faq-question">
+              <span>What makes your silver sparkle and shimmer accents unique?</span>
+              <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Unlike generic plastic micro-glitters that irritate delicate eyelid skin and damage oceans, Cherry Blossom uses micro-refined synthetic fluorphlogopite and cosmetic-grade silver pearls. They melt into skin with zero gritty texture and reflect ambient candlelight seamlessly.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 5 -->
+          <div class="faq-card">
+            <button type="button" class="faq-question">
+              <span>Can I book a private bridal beauty trial at your salons?</span>
+              <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Indeed. Our salons in Mumbai and New Delhi feature private VIP dressing suites where brides and bridal parties enjoy champagne consultations, skin prep diagnostics, and custom shade blending sessions. Submit a request using the form above.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Luxury Footer -->
+  <footer class="luxury-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <div class="footer-brand-col">
+          <a href="index.html" class="brand-logo-wrap">
+            <div class="brand-logo-icon">
+              <i class="fas fa-spa"></i>
+            </div>
+            <div class="brand-logo-text">
+              <span class="brand-logo-title">CHERRY BLOSSOM</span>
+              <span class="brand-logo-subtitle">Haute Beauté • Paris</span>
+            </div>
+          </a>
+          <p class="footer-brand-text">
+            Crafting the world's most luxurious cosmetic creations since 2014. Where Japanese Sakura botanical grace unites with French high fashion refinement.
+          </p>
+          <div class="footer-social-links">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://pinterest.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-title">The Collections</h4>
+          <ul class="footer-links-list">
+            <li><a href="shop.html?category=Lipsticks">Velvet Lipsticks</a></li>
+            <li><a href="shop.html?category=Foundations">Luminous Foundations</a></li>
+            <li><a href="shop.html?category=Eyeshadow%20Palettes">Eyeshadow Palettes</a></li>
+            <li><a href="shop.html?category=Highlighters">Diamond Highlighters</a></li>
+            <li><a href="shop.html?category=Blushes">Cherry Petal Blushes</a></li>
+            <li><a href="shop.html?category=Makeup%20Brushes">Artisan Vegan Brushes</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Client Concierge</h4>
+          <ul class="footer-links-list">
+            <li><a href="about.html">The Maison Atelier</a></li>
+            <li><a href="contact.html">Boutique Appointments</a></li>
+            <li><a href="contact.html#faq">Shipping & Deliveries</a></li>
+            <li><a href="cart.html">View Shopping Bag</a></li>
+            <li><a href="login.html">VIP Member Account</a></li>
+            <li><a href="contact.html#faq">Shade Finding Service</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Flagship Salons</h4>
+          <div class="footer-contact-info">
+            <p>
+              <i class="fas fa-map-marker-alt"></i>
+              <span>74 Palais Royal, Bandra West, Mumbai 400050, India</span>
+            </p>
+            <p>
+              <i class="fas fa-phone-alt"></i>
+              <span>VIP Concierge: +91 22 8900 2400</span>
+            </p>
+            <p>
+              <i class="fas fa-envelope"></i>
+              <span>concierge@cherryblossombeaute.com</span>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copyright">
+          &copy; 2026 CHERRY BLOSSOM HAUTE BEAUTÉ. All Rights Reserved.
+        </p>
+        <div class="footer-payment-icons">
+          <i class="fab fa-cc-visa" title="Visa"></i>
+          <i class="fab fa-cc-mastercard" title="Mastercard"></i>
+          <i class="fab fa-cc-amex" title="American Express"></i>
+          <i class="fab fa-google-pay" title="Google Pay"></i>
+          <i class="fas fa-shield-alt" title="100% Secure 256-Bit SSL"></i>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mini Cart Drawer -->
+  <div class="drawer-backdrop" id="mini-cart-backdrop"></div>
+  <aside class="mini-cart-drawer" id="mini-cart-drawer" aria-label="Mini Cart">
+    <div class="mini-cart-header">
+      <h3>Your Luxury Bag (<span id="mini-cart-item-count">0</span>)</h3>
+      <button type="button" class="btn-close-drawer" id="mini-cart-close">&times;</button>
+    </div>
+
+    <div class="mini-cart-body">
+      <div class="mini-cart-empty" id="mini-cart-empty">
+        <i class="fas fa-shopping-bag"></i>
+        <h4 style="font-size: 1.2rem; color: var(--dark-burgundy); margin-bottom: 8px;">Your Bag is Currently Empty</h4>
+        <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 24px;">Discover our iconic cosmetics and treat yourself to royalty.</p>
+        <a href="shop.html" class="btn-luxury-primary shimmer-btn-effect">Explore Collection</a>
+      </div>
+
+      <div id="mini-cart-content" style="display: none;">
+        <div id="mini-cart-items"></div>
+      </div>
+    </div>
+
+    <div class="mini-cart-footer">
+      <div class="mini-cart-subtotal-row">
+        <span>Estimated Subtotal:</span>
+        <strong id="mini-cart-subtotal">₹0</strong>
+      </div>
+      <div class="mini-cart-btns-row">
+        <a href="cart.html" class="btn-luxury-secondary" style="padding: 12px 18px; font-size: 0.8rem; text-align: center;">View Bag</a>
+        <a href="checkout.html" class="btn-luxury-primary shimmer-btn-effect" style="padding: 12px 18px; font-size: 0.8rem; text-align: center;">Checkout</a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Global Search Overlay -->
+  <div class="search-modal-overlay" id="search-modal-overlay">
+    <div class="search-modal-container">
+      <span class="search-modal-close" id="search-modal-close">&times;</span>
+      <div class="search-box-giant">
+        <input type="text" id="global-search-input" placeholder="Search lipsticks, foundations, palettes, brushes..." autocomplete="off" />
+        <i class="fas fa-search"></i>
+      </div>
+      <div class="search-results-list" id="global-search-results">
+        <p class="search-placeholder-text">Type at least 2 characters to explore luxury collections...</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Back To Top Button -->
+  <button type="button" class="btn-back-to-top" id="btn-back-to-top" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- JavaScript Modules -->
+  <script src="js/products.js"></script>
+  <script src="js/wishlist.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/filters.js"></script>
+  <script src="js/validation.js"></script>
+  <script src="js/main.js"></script>
+
+  <!-- Contact & FAQ logic -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // FAQ Accordion toggles
+      document.querySelectorAll('.faq-question').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const card = btn.parentElement;
+          card.classList.toggle('active');
+        });
+      });
+
+      // Contact Form submit
+      const form = document.getElementById('contact-form');
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const valid = window.ValidationService.validateContactForm(form);
+        if (valid) {
+          window.showToast('Thank you! Your correspondence has been dispatched to our VIP Concierge team.', 'success', 5000);
+          form.reset();
+        }
+      });
+    });
+  </script>
+</body>
+</html>

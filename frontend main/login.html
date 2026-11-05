@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Sign in to your Cherry Blossom VIP Account. Access private previews, diamond tier loyalty points, and expedited concierge dispatch." />
+  <title>VIP Sign In | CHERRY BLOSSOM Haute Beauté</title>
+
+  <!-- External Styles & Icon Libraries -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+
+  <!-- Announcement Bar -->
+  <aside class="announcement-bar">
+    <div class="container">
+      <i class="fas fa-crown"></i>
+      <span>Cherry Blossom VIP Privilege Club • Exclusive Member Portal</span>
+    </div>
+  </aside>
+
+  <!-- Simple Header -->
+  <header class="luxury-header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="index.html" class="brand-logo-wrap">
+          <div class="brand-logo-icon">
+            <i class="fas fa-spa"></i>
+          </div>
+          <div class="brand-logo-text">
+            <span class="brand-logo-title">CHERRY BLOSSOM</span>
+            <span class="brand-logo-subtitle">Haute Beauté • Paris</span>
+          </div>
+        </a>
+
+        <div style="display: flex; align-items: center; gap: 14px; font-size: 0.9rem;">
+          <a href="index.html" style="color: var(--text-dark);"><i class="fas fa-arrow-left"></i> Return Home</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="auth-page-section silver-sparkle-container">
+      <div class="auth-card-container reveal-on-scroll">
+        <div class="auth-header">
+          <div style="font-size: 2.2rem; color: var(--primary-burgundy); margin-bottom: 8px;">
+            <i class="fas fa-spa"></i>
+          </div>
+          <h1>VIP Member Access</h1>
+          <p>Enter your distinguished credentials to enter the Maison</p>
+        </div>
+
+        <form id="login-form">
+          <div class="form-group">
+            <label>Registered VIP Email *</label>
+            <input type="email" class="form-control" name="email" placeholder="client@luxury.com" required value="lady.sanjana@cherryblossom.com" />
+          </div>
+
+          <div class="form-group">
+            <label>Master Password *</label>
+            <div class="password-input-wrap">
+              <input type="password" class="form-control" name="password" placeholder="••••••••••••" required value="LuxurySecret2026" />
+              <button type="button" class="btn-toggle-password" aria-label="Toggle password visibility">
+                <i class="far fa-eye"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="auth-extra-row">
+            <label class="remember-checkbox">
+              <input type="checkbox" name="remember" checked />
+              <span>Remember My Suite</span>
+            </label>
+            <a href="#" class="forgot-link" id="btn-forgot-password">Forgot Secret?</a>
+          </div>
+
+          <button type="submit" class="btn-luxury-primary btn-auth-submit shimmer-btn-effect">
+            <span>Sign In to VIP Suite</span>
+            <i class="fas fa-arrow-right"></i>
+          </button>
+
+          <div class="auth-divider">
+            <span>Or continue with</span>
+          </div>
+
+          <div class="social-auth-row">
+            <button type="button" class="btn-social-auth" onclick="AuthService.setUser({name: 'Lady Sanjana', email: 'sanjana@google.com'}); showToast('Signed in via Google VIP SSO!', 'success'); setTimeout(()=>window.location.href='index.html', 800);">
+              <i class="fab fa-google" style="color: #EA4335;"></i> Google VIP
+            </button>
+            <button type="button" class="btn-social-auth" onclick="AuthService.setUser({name: 'Duchess Eleanor', email: 'eleanor@icloud.com'}); showToast('Signed in via Apple ID!', 'success'); setTimeout(()=>window.location.href='index.html', 800);">
+              <i class="fab fa-apple"></i> Apple Pass
+            </button>
+          </div>
+
+          <p class="auth-switch-text">
+            Not yet inducted into the VIP Circle?
+            <a href="register.html">Request Privilege Membership</a>
+          </p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Forgot Password Modal -->
+  <div class="modal-overlay" id="forgot-modal">
+    <div class="modal-content-card" style="max-width: 480px; padding: 36px; text-align: center;">
+      <button type="button" class="modal-close-btn" id="forgot-modal-close">&times;</button>
+      <div style="font-size: 2.5rem; color: var(--primary-burgundy); margin-bottom: 14px;">
+        <i class="fas fa-key"></i>
+      </div>
+      <h3 style="font-size: 1.8rem; color: var(--dark-burgundy); margin-bottom: 8px;">Reset Credentials</h3>
+      <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 24px;">
+        Enter your registered VIP email address to receive an encrypted security link.
+      </p>
+      <form id="forgot-password-form">
+        <div class="form-group" style="text-align: left;">
+          <label>VIP Email Address</label>
+          <input type="email" class="form-control" required placeholder="client@luxury.com" />
+        </div>
+        <button type="submit" class="btn-luxury-primary shimmer-btn-effect" style="width: 100%;">
+          Dispatch Recovery Link
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Luxury Footer -->
+  <footer class="luxury-footer">
+    <div class="container text-center">
+      <p class="footer-copyright">
+        &copy; 2026 CHERRY BLOSSOM HAUTE BEAUTÉ. VIP Demonstration Portal.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Back To Top Button -->
+  <button type="button" class="btn-back-to-top" id="btn-back-to-top" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- JavaScript Modules -->
+  <script src="js/products.js"></script>
+  <script src="js/wishlist.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/filters.js"></script>
+  <script src="js/validation.js"></script>
+  <script src="js/main.js"></script>
+
+  <!-- Login Logic Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const loginForm = document.getElementById('login-form');
+      loginForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const valid = window.ValidationService.validateLoginForm(loginForm);
+        if (valid) {
+          const email = loginForm.querySelector('[name="email"]').value;
+          const userObj = {
+            name: email.split('@')[0].replace('.', ' ').replace(/\b\w/g, l => l.toUpperCase()),
+            email: email
+          };
+          window.AuthService.setUser(userObj);
+          window.showToast(`Welcome back, ${userObj.name}! VIP Privileges Activated.`, 'success', 3500);
+          setTimeout(() => {
+            window.location.href = 'index.html';
+          }, 900);
+        }
+      });
+
+      // Forgot Password Modal
+      const forgotModal = document.getElementById('forgot-modal');
+      const forgotBtn = document.getElementById('btn-forgot-password');
+      const forgotClose = document.getElementById('forgot-modal-close');
+
+      if (forgotBtn && forgotModal) {
+        forgotBtn.addEventListener('click', (e) => {
+          e.preventDefault();
+          forgotModal.classList.add('active');
+          document.body.classList.add('modal-open');
+        });
+      }
+
+      if (forgotClose && forgotModal) {
+        forgotClose.addEventListener('click', () => {
+          forgotModal.classList.remove('active');
+          document.body.classList.remove('modal-open');
+        });
+      }
+
+      document.getElementById('forgot-password-form').addEventListener('submit', (e) => {
+        e.preventDefault();
+        forgotModal.classList.remove('active');
+        document.body.classList.remove('modal-open');
+        window.showToast('Security dispatch sent. Check your private inbox.', 'info', 4000);
+      });
+    });
+  </script>
+</body>
+</html>
+
